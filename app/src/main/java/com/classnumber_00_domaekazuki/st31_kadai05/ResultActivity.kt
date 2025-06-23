@@ -1,7 +1,9 @@
 package com.classnumber_00_domaekazuki.st31_kadai05
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +19,14 @@ class ResultActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val finishButton: Button = findViewById(R.id.finishButton)
+        finishButton.setOnClickListener {
+            // 戻る事ができる
+//            val intent: Intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+            // 画面を終了して、「捨てる」(戻る事ができなくなる)
+            finish()
         }
     }
     override fun onStart() {
