@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ST31_kadai05</string>
+    <string name="result_text">結果画面</string>
 </resources>
