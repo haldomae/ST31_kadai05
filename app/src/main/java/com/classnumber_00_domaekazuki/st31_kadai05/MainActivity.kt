@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             // ResultActivityに遷移する為に記述
             // Javaのクラスに変換する為に::class.javaを付ける必要がある
             val intent: Intent = Intent(this, ResultActivity::class.java)
+            // 値を送信したい場合
+            intent.putExtra("VALUE", "MainActivityから値を送る")
             // 画面遷移が始まる
             startActivity(intent)
         }

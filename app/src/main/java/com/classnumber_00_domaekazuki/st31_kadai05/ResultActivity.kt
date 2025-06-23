@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,6 +29,9 @@ class ResultActivity : AppCompatActivity() {
             // 画面を終了して、「捨てる」(戻る事ができなくなる)
             finish()
         }
+        val putText = intent.getStringExtra("VALUE")
+        val resultText: TextView = findViewById(R.id.resultText)
+        resultText.text = putText.toString()
     }
     override fun onStart() {
         super.onStart()
