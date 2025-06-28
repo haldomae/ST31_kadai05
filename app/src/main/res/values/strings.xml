@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ST31_kadai05</string>
+    <string name="menu_1">ビール</string>
+    <string name="menu_2">レモンサワー</string>
+    <string name="menu_3">日本酒</string>
+    <string name="menu_4">ワイン</string>
+    <string name="menu_5">焼酎</string>
+    <string name="menu_6">梅酒</string>
+    <string name="submit_button">注文を送信</string>
+    <string name="result_text">注文結果表示</string>
+    <string name="result_button">メニューに戻る</string>
 </resources>

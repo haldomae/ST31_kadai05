@@ -8,12 +8,53 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/menuText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <Button
+            android:id="@+id/menu1"
+            style="@style/menu_button_style"
+            android:text="@string/menu_1"/>
+        <Button
+            android:id="@+id/menu2"
+            style="@style/menu_button_style"
+            android:text="@string/menu_2"/>
+        <Button
+            android:id="@+id/menu3"
+            style="@style/menu_button_style"
+            android:text="@string/menu_3"/>
+        <Button
+            android:id="@+id/menu4"
+            style="@style/menu_button_style"
+            android:text="@string/menu_4"/>
+        <Button
+            android:id="@+id/menu5"
+            style="@style/menu_button_style"
+            android:text="@string/menu_5"/>
+        <Button
+            android:id="@+id/menu6"
+            style="@style/menu_button_style"
+            android:text="@string/menu_6"/>
+    </GridLayout>
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
