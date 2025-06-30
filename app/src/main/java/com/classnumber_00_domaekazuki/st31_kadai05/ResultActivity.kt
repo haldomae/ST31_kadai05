@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,6 +31,11 @@ class ResultActivity : AppCompatActivity() {
             // 画面を破棄
             finish()
         }
+        // 値を受け取る
+        val putText = intent.getStringExtra("VALUE")
+        val resultText : TextView =
+            findViewById(R.id.resultText)
+        resultText.text = putText
     }
 
     override fun onStart() {
