@@ -1,7 +1,9 @@
 package com.classnumber_00_domaekazuki.st31_kadai05
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +22,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val button : Button =
+            findViewById(R.id.transitionButton)
+
+        button.setOnClickListener {
+            // 画面遷移の「指示書(Intent)」を作成
+            // 1引数 : context
+            // 2引数 : 遷移先のクラス(Javaのクラスで指定)
+            // ::class.javaでJavaのクラスに変換
+            val intent = Intent(this, ResultActivity::class.java)
+            // 画面遷移を行う
+            startActivity(intent)
+        }
+
     }
     // Activityがユーザに見える状態になった時に実行される
     // 操作可能になるまでに間実行される
