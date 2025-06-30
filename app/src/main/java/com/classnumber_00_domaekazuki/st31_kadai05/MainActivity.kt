@@ -59,4 +59,11 @@ class MainActivity : AppCompatActivity() {
         Log.i("LifeCycle", "MainActivityのonRestartが実行")
         super.onRestart()
     }
+
+    // アプリ、画面が破棄されるときに実行される
+    // 画面の構成が変更(横画面にするなど)されたときも実行される
+    override fun onDestroy() {
+        Log.i("LifeCycle", "MainActivityのonDestroyが実行")
+        super.onDestroy()
+    }
 }
