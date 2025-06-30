@@ -21,4 +21,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+    // Activityがユーザに見える状態になった時に実行される
+    // 操作可能になるまでに間実行される
+    // データの初期化などに使用される(GPS,センサー)
+    // 画面遷移から戻ってきたときも実行されます
+    // カメラ、音声の準備
+    override fun onStart() {
+        Log.i("LifeCycle", "MainActivityのonStartが実行")
+        super.onStart()
+    }
 }
