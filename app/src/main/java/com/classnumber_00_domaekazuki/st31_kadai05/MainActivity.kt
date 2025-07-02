@@ -49,4 +49,12 @@ class MainActivity : AppCompatActivity() {
         Log.i("LifeCycle", "MainActivityのonPauseが実行")
         super.onPause()
     }
+
+    // アプリが完全バックグランドに移動した時に実行
+    // 画面は非表示になり、停止する
+    // 不要なリソースを解放したり、思い処理の負荷を抑える
+    override fun onStop() {
+        Log.i("LifeCycle", "MainActivityのonStopが実行")
+        super.onStop()
+    }
 }
