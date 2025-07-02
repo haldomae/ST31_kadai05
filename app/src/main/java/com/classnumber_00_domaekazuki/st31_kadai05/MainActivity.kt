@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
             // this -> この画面
             // 2つ目の引数 : 遷移先のクラス(::class.javaを付けてJavaのクラスに変換)
             val intent = Intent(this, ResultActivity::class.java)
+            // 値を受け渡したい場合
+            intent.putExtra("VALUE", "MainActivityからの値")
             // 画面遷移
             startActivity(intent)
         }

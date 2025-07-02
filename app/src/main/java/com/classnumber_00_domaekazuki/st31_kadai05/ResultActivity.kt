@@ -29,6 +29,10 @@ class ResultActivity : AppCompatActivity() {
             // 画面を破棄
 //            finish()
         }
+
+        val putValue =
+            intent.getStringExtra("VALUE")
+        Log.i("LifeCycle", putValue.toString())
     }
 
     override fun onStart() {
