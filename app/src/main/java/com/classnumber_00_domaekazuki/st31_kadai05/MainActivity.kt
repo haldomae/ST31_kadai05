@@ -33,4 +33,11 @@ class MainActivity : AppCompatActivity() {
         Log.i("LifeCycle", "MainActivityのonStartが実行")
         super.onStart()
     }
+
+    // 画面が前面に表示され、ユーザとのやり取りができる直前に実行
+    // DBの更新など必要な情報を更新する処理などを実行する
+    override fun onResume() {
+        Log.i("LifeCycle", "MainActivityのonResumeが実行")
+        super.onResume()
+    }
 }
