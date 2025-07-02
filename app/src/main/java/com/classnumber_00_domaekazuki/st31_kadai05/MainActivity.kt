@@ -57,4 +57,10 @@ class MainActivity : AppCompatActivity() {
         Log.i("LifeCycle", "MainActivityのonStopが実行")
         super.onStop()
     }
+
+    // 画面再表示で実行される
+    override fun onRestart() {
+        Log.i("LifeCycle", "MainActivityのonRestartが実行")
+        super.onRestart()
+    }
 }
