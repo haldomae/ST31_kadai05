@@ -1,7 +1,9 @@
 package com.classnumber_00_domaekazuki.st31_kadai05
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +24,16 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val button: Button = findViewById(R.id.transitionButton)
+        button.setOnClickListener {
+            // 指示書(Intent)を作成
+            // 1つ目の引数 : context(どこの画面から指示が出ているか)
+            // this -> この画面
+            // 2つ目の引数 : 遷移先のクラス(::class.javaを付けてJavaのクラスに変換)
+            val intent = Intent(this, ResultActivity::class.java)
+            // 画面遷移
+            startActivity(intent)
         }
     }
 
